@@ -1,0 +1,169 @@
+/* Compatibilidad admin.html, empleados.html,
+   proyectos.html y reportes.html */
+
+/* Reseteo Basico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+/* Tipografia */
+body {
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Contenedor principal */
+.admin-container { display: flex; min-height: 100vh; }
+
+/* Sidebar fija */
+.sidebar {
+  width: 230px;
+  background: #000;            
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 12px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.sidebar .logo { text-align: center; margin-bottom: 18px; }
+.sidebar .logo img { width: 44px; display: block; margin: 0 auto 8px; }
+.sidebar h2, .sidebar .logo h2 { font-size: 18px; color: #fff; }
+
+.sidebar nav { margin-top: 6px; }
+.sidebar nav ul { list-style: none; padding-left: 0; }
+.sidebar nav ul li { margin: 6px 0; }
+.sidebar nav ul li a {
+  display: block;
+  padding: 10px 14px;
+  color: #cfcfcf;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.18s, color 0.18s;
+  font-size: 15px;
+}
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background: #222;
+  color: #fff;
+}
+
+/* logout que acepta #logoutBtn o clase .logout-btn */
+#logoutBtn,
+.sidebar .logout-btn {
+  margin-top: auto;
+  display: block;
+  width: calc(100% - 24px);
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+}
+#logoutBtn:hover,
+.sidebar .logout-btn:hover { background: #444; }
+
+/* Mein content q se posiciona a la derecha del sidebar fijo */
+.main-content {
+  margin-left: 230px; /* dejar espacio para sidebar maricones */
+  padding: 30px;
+  width: calc(100% - 230px);
+  min-height: 100vh;
+}
+
+/* Cabecera */
+header h1 { font-size: 24px; color: #111; margin-bottom: 6px; }
+header p { color: #666; margin-bottom: 18px; }
+
+/* tarjetas informativas */
+.card-container, .dashboard { display: flex; gap: 18px; flex-wrap: wrap; }
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 18px;
+  width: 260px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.card h3 { margin-bottom: 10px; color: #111; font-size: 15px; }
+.card p, .card span { font-weight: 700; font-size: 22px; color: #111; }
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+table th, table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+table th {
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+}
+table tr:nth-child(even) td { background: #fafafa; }
+
+/* formularios */
+form { background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #e6e6e6; margin-top: 18px; }
+form label { display:block; margin-bottom:6px; color:#333; font-weight:600; }
+form input, form select, form textarea {
+  width:100%; padding:10px 12px; margin-bottom:12px; border:1px solid #d6d6d6; border-radius:6px;
+  font-size:14px; color:#222;
+}
+
+/* Botones */
+button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .18s ease;
+  font-size: 14px;
+}
+button:hover { background: #333; }
+
+/* lista simple de empleados */
+#listaEmpleados { list-style: none; margin-top: 12px; padding-left: 0; }
+#listaEmpleados li {
+  background: #fff; border:1px solid #e7e7e7; padding:10px 12px; margin-bottom:8px; border-radius:6px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+#listaEmpleados li button { margin-left:8px; }
+
+/* Progreso (proyectos) */
+.barra-avance { background:#e9e9e9; height:10px; border-radius:8px; overflow:hidden; margin:8px 0; }
+.barra-avance .avance { height:100%; background:#111; transition: width .3s ease; }
+
+/* Reportes: bloque con margen */
+#estadoReporte { background:#fff; padding:16px; border-radius:8px; border:1px solid #e6e6e6; }
+
+/* Footer */
+footer { text-align:center; color:#777; font-size:13px; padding:16px; margin-top:20px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sidebar { position: relative; width:100%; height:auto; display:block; padding:12px; }
+  .main-content { margin-left: 0; width:100%; padding:16px; }
+  .card { width:100%; }
+  table th, table td { font-size:13px; padding:10px; }
+}

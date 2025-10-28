@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/869dc8f5ef.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Ballers Construction | Login</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Registro -->
+    <div class="form-container sign-up-container">
+      <form id="registerForm">
+        <h1>Crea tu Cuenta</h1>
+
+        <!-- Iconos de redes -->
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <span>o usa tu email como registro</span>
+        <input type="text" id="regName" placeholder="Nombre completo" required />
+        <input type="email" id="regEmail" placeholder="Correo electrónico" required />
+        <input type="password" id="regPassword" placeholder="Contraseña" required />
+        <button type="submit" id="lila">Registrar</button>
+
+        <!-- Mensaje dinámico -->
+        <p id="registerMsg" class="msg"></p>
+      </form>
+    </div>
+
+    <!-- Login -->
+    <div class="form-container sign-in-container">
+      <form id="loginForm">
+        <h1>Ballers Construction</h1>
+
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <span>o usa tu email</span>
+        <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+        <input type="password" id="loginPassword" placeholder="Contraseña" required />
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <button type="submit">Iniciar sesión</button>
+
+        <!-- Mensaje dinámico -->
+        <p id="loginMsg" class="msg"></p>
+      </form>
+    </div>
+
+    <!-- Paneles de Cambios-->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>¡Bienvenido!</h1>
+          <p>Inicia sesión con tu cuenta para continuar</p>
+          <button class="ghost" id="signIn">Inicia sesión</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>¡Hola!</h1>
+          <p>Regístrate para formar parte de Ballers Construction</p>
+          <button class="ghost" id="signUp">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

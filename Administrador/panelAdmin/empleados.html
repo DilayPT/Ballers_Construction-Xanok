@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Empleados | Ballers Construction</title>
+  <link rel="stylesheet" href="./panelAdmincss/stylePanel.css">
+  <script defer src="./panelAdminJS/empleados.js"></script>
+</head>
+<body>
+
+  <!-- Estructura pirncipal del panel -->
+  <div class="admin-container">
+    <aside class="sidebar">
+      <h2>Panel Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="admin.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="empleados.html" class="active">Empleados</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+        </ul>
+      </nav>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </aside>
+    <!-- Contenido principal -->
+    <main class="content">
+
+      <!-- Formulario de registro -->
+      <section class="form-section">
+        <h2>Registrar Nuevo Empleado</h2>
+        <p class="section-description">
+          Registra los empleados de Ballers Construction con su información principal.  
+          Los datos se almacenan y se pueden eliminar desde la lista.
+        </p>
+
+        <form id="formEmpleado">
+          <div class="form-grid">
+            <div class="form-field">
+              <label>Nombre completo</label>
+              <input type="text" id="nombreEmpleado" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <div class="form-field">
+              <label>Cargo</label>
+              <input type="text" id="cargoEmpleado" placeholder="Ej: Ingeniero civil" required>
+            </div>
+
+            <div class="form-field">
+              <label>Correo electrónico</label>
+              <input type="email" id="correoEmpleado" placeholder="Ej: juan@ballers.com" required>
+            </div>
+
+            <div class="form-field">
+              <label>Teléfono</label>
+              <input type="text" id="telefonoEmpleado" placeholder="Ej: 3001234567" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-guardar">Guardar Empleado</button>
+        </form>
+      </section>
+
+      <!-- Seccion de lista de empleados -->
+      <section class="list-section">
+        <h2>Lista de Empleados Registrados</h2>
+        <p class="section-description">
+          Aquí podrás visualizar todos los empleados registrados, su información de contacto y eliminar cualquiera si es necesario.
+        </p>
+
+        <!-- Contenedor dinamico, los empleados se renderizan desde empleados.js -->
+        <div id="listaEmpleados" class="lista empleados-lista">
+        </div>
+      </section>
+
+      <!-- Seccion estadisticas -->
+      <section class="stats-section">
+        <h2>Resumen del Personal</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total de Empleados</h3>
+            <p id="totalEmpleados">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Cargos Distintos</h3>
+            <p id="totalCargos">0</p>
+          </div>
+          <div class="stat-card">
+            <h3>Último Registro</h3>
+            <p id="ultimoRegistro">-</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

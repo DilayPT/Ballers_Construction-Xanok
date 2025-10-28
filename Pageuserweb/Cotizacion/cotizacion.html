@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitar Cotización | Ballers Construction</title>
+  <link rel="stylesheet" href="cotizacion.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3069/3069176.png" alt="logo" />
+      <span>Ballers Construction</span>
+    </div>
+    <nav>
+      <a href="../Userweb.html">Inicio</a>
+      <a href="../Userweb.html">Servicios</a>
+      <a href="../Userweb.html">Proyectos</a>
+      <a href="../Userweb.html">Contacto</a> 
+    </nav>
+  </header>
+
+  <!-- Formulario de cotización -->
+  <section class="cotizacion">
+    <div class="form-box">
+      <h2>Solicita tu cotización</h2>
+      <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+      <form id="formCotizacion">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ej. juanperez@gmail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. +57 300 123 4567" required />
+        </div>
+
+        <!-- Tipo de proyecto -->
+        <div class="form-group">
+          <label for="tipo">Tipo de proyecto</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option value="residencial">Residencial</option>
+            <option value="comercial">Comercial</option>
+            <option value="remodelacion">Remodelación</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion">Descripción del proyecto</label>
+          <textarea id="descripcion" name="descripcion" rows="5" placeholder="Cuéntanos brevemente tu idea..." required></textarea>
+        </div>
+
+        <!-- Brn para enviar cotizacion -->
+        <button type="submit" class="btn-primario">Enviar Cotización</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ballers Construction | Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="cotizacion.js"></script>
+</body>
+</html>

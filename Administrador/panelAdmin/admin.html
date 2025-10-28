@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración | Ballers Construction</title>
+  <link rel="stylesheet" href="./panelAdmincss/styleAdmin.css">
+</head>
+<body>
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="../../img/Iconos/3069176.png" alt="Logo">
+      <h2>Ballers Admin</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="admin.html" class="active">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="empleados.html">Empleados</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+      </ul>
+    </nav>
+    <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+
+  </aside>
+
+  <!-- contenido principal -->
+  <main class="main-content">
+    <header>
+      <h1>Panel de Administración</h1>
+      <p>Bienvenido, <span id="adminName">Administrador</span></p>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Total de Proyectos</h3>
+        <p id="totalProyectos">0</p>
+      </div>
+      <div class="card">
+        <h3>Empleados Activos</h3>
+        <p id="totalEmpleados">0</p>
+      </div>
+      <div class="card">
+        <h3>Reportes Pendientes</h3>
+        <p id="totalReportes">0</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./panelAdminJS/admin.js"></script>
+</body>
+</html>

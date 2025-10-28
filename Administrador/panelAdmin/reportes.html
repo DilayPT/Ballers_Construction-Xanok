@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reportes | Panel Admin</title>
+  <link rel="stylesheet" href="./panelAdmincss/stylePanel.css">
+  <script defer src="./panelAdminJS/reportes.js"></script>
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="sidebar">
+      <h2>Panel Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="admin.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="empleados.html">Empleados</a></li>
+          <li><a href="reportes.html" class="active">Reportes</a></li>
+        </ul>
+      </nav>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>Reportes y Resúmenes</h1>
+        <p class="intro">La sección presenta reportes</p>
+      </header>
+
+      <!-- Ejemplos estaticos de reportes -->
+      <section class="example-section">
+        <h2>Reportes de ejemplo</h2>
+        <div class="reporte-item">
+          <h3>Reporte mensual - Ventas</h3>
+          <p>Resumen de ventas y facturación</p>
+        </div>
+
+        <div class="reporte-item">
+          <h3>Reporte de Seguridad</h3>
+          <p>Inspecciones de obra y cumplimiento de normas.</p>
+        </div>
+      </section>
+
+      <!-- area para generar resumen  -->
+      <section class="report-section">
+        <h2>Generar resumen dinámico</h2>
+        <p>Presiona el botón para calcular métricas basadas en proyectos </p>
+        <button id="btnGenerar">Generar Resumen</button>
+
+        <div id="resumen" class="resumen">
+          <p class="muted">Aún no se ha generado ningún resumen.</p>
+        </div>
+      </section>
+
+      <!-- Pequeña area para ver metricas predefinidas -->
+      <section class="metrics">
+        <h2>Métricas rápidas</h2>
+        <ul id="metricList">
+          <li>Total proyectos: 3</li>
+          <li>Total empleados: 12</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
