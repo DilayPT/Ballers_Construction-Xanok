@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { nombre: "Juan Pérez" }, { nombre: "Laura Gómez" }, { nombre: "Andrés Díaz" }
   ];
 
-  // Al presionar el botón generamos un resumen (simulando una petición con setTimeout)
+  // Presionando el botón generamos un resumen (simulando una petición con setTimeout)
   btnGenerar.addEventListener("click", () => {
     // Indicador visual de carga
     resumen.innerHTML = "<p>Cargando datos del reporte...</p>";
@@ -38,4 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     }, 600); // 600ms de retardo 
   });
+
+   logoutBtn.addEventListener("click", () => {
+    // Uso de confirm (entrada sincrónica) + condicionales
+    const confirmar = confirm("¿Seguro que deseas cerrar sesión?");
+    if (confirmar) {
+      localStorage.removeItem("adminLogged");
+      window.location.href = "../../FormularioSesion/index.html";
+    }
+  });
+
 });
