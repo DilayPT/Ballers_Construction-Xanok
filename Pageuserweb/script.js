@@ -8,3 +8,14 @@ document.querySelectorAll('nav a').forEach(link => {
     }
   });
 });
+
+// Cerrar sesión con confirmación
+document.getElementById("logoutBtn").addEventListener("click", () => {
+    const confirmLogout = confirm("¿Seguro que quieres cerrar sesión?");
+    if (confirmLogout) {
+      // Limpia datos temporales
+      localStorage.clear();
+      sessionStorage.clear();
+      window.location.href = "../../FormularioSesion/index.html";
+    }
+  });

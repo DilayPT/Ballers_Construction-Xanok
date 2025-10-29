@@ -4,13 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Proyectos | Panel Admin</title>
-  <link rel="stylesheet" href="./panelAdmincss/stylePanel.css" />
+  <link rel="stylesheet" href="./panelAdmincss/styleAdmin.css" />
   <script defer src="./panelAdminJS/proyectos.js"></script>
 </head>
 <body>
   <div class="admin-container">
     <aside class="sidebar">
-      <h2>Panel Admin</h2>
+      <div class="logo">
+        <img src="../../img/Iconos/3069176.png" alt="Logo">
+        <h2>Ballers Admin</h2>
+      </div>
       <nav>
         <ul>
           <li><a href="admin.html">Inicio</a></li>
@@ -19,35 +22,26 @@
           <li><a href="reportes.html">Reportes</a></li>
         </ul>
       </nav>
-      <button id="logoutBtn">Cerrar sesión</button>
+      <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
     </aside>
 
-    <main class="content">
+    <main class="main-content">
       <header>
         <h1>Gestión de Proyectos</h1>
-        
       </header>
 
-      <!-- Ejemplos estaticos -->
       <section class="example-section">
-        <h2>Proyectos destacados </h2>
+        <h2>Proyectos destacados</h2>
 
         <div class="proyecto-item">
           <h3>Edificio Central</h3>
           <p><strong>Ubicación:</strong> Calle 10 #45</p>
           <p><strong>Progreso:</strong> 85%</p>
-          <p><small>Descripcion: Torre de oficinas - fase final.</small></p>
+          <p><small>Descripción: Torre de oficinas - fase final.</small></p>
         </div>
 
-        <div class="proyecto-item">
-          <h3>Residencial Los Sauces</h3>
-          <p><strong>Ubicacion:</strong> Zona Norte</p>
-          <p><strong>Progreso:</strong> 55%</p>
-          <p><small>Descripción: Conjunto habitacional - estructura en curso.</small></p>
-        </div>
       </section>
 
-      <!-- Formulario para añadir proyectos -->
       <section class="form-section">
         <h2>Agregar nuevo proyecto</h2>
         <form id="formProyecto">
@@ -67,16 +61,13 @@
         </form>
       </section>
 
-      <!-- Lista dinamica -->
       <section class="list-section">
-        <h2>Proyectos recientes </h2>
+        <h2>Proyectos recientes</h2>
         <div id="listaProyectos">
-          <!-- Aquí el JS renderiza los proyectos añadidos -->
-          <p class="muted">No hay proyectos añadidos aunn.</p>
+          <p class="muted">No hay proyectos añadidos aún.</p>
         </div>
       </section>
 
-      <!-- Estadisticas -->
       <section class="stats-section">
         <h2>Resumen rápido</h2>
         <div class="stats-grid">
@@ -94,7 +85,6 @@
           </div>
         </div>
       </section>
-
     </main>
   </div>
 </body>

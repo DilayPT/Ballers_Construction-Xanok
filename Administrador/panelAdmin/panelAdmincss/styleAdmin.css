@@ -15,7 +15,12 @@ body {
 }
 
 /* Contenedor principal */
-.admin-container { display: flex; min-height: 100vh; }
+.admin-container {
+  display: flex;
+  height: 100vh; 
+  width: 100%;
+  
+}
 
 /* Sidebar fija */
 .sidebar {

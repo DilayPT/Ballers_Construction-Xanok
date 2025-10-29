@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestión de Empleados | Ballers Construction</title>
-  <link rel="stylesheet" href="./panelAdmincss/stylePanel.css">
+  <link rel="stylesheet" href="./panelAdmincss/styleAdmin.css">
   <script defer src="./panelAdminJS/empleados.js"></script>
 </head>
 <body>
-
-  <!-- Estructura pirncipal del panel -->
   <div class="admin-container">
+
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>Panel Admin</h2>
+      <div class="logo">
+        <img src="../../img/Iconos/3069176.png" alt="Logo">
+        <h2>Ballers Admin</h2>
+      </div>
       <nav>
         <ul>
           <li><a href="admin.html">Inicio</a></li>
@@ -21,11 +24,11 @@
           <li><a href="reportes.html">Reportes</a></li>
         </ul>
       </nav>
-      <button id="logoutBtn">Cerrar sesión</button>
+      <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
     </aside>
-    <!-- Contenido principal -->
-    <main class="content">
 
+    <!-- Contenido principal -->
+    <main class="main-content">
       <!-- Formulario de registro -->
       <section class="form-section">
         <h2>Registrar Nuevo Empleado</h2>
@@ -61,19 +64,17 @@
         </form>
       </section>
 
-      <!-- Seccion de lista de empleados -->
+      <!-- Lista de empleados -->
       <section class="list-section">
         <h2>Lista de Empleados Registrados</h2>
         <p class="section-description">
           Aquí podrás visualizar todos los empleados registrados, su información de contacto y eliminar cualquiera si es necesario.
         </p>
 
-        <!-- Contenedor dinamico, los empleados se renderizan desde empleados.js -->
-        <div id="listaEmpleados" class="lista empleados-lista">
-        </div>
+        <div id="listaEmpleados" class="lista empleados-lista"></div>
       </section>
 
-      <!-- Seccion estadisticas -->
+      <!-- Estadísticas -->
       <section class="stats-section">
         <h2>Resumen del Personal</h2>
         <div class="stats-grid">
@@ -91,9 +92,7 @@
           </div>
         </div>
       </section>
-
     </main>
   </div>
-
 </body>
 </html>

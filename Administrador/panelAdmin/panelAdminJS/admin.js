@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return; // detiene ejecución si no está logueado
   }
 
-  // Manipulación del DOM (Semana 11)
+  // Manipulación del DOM
   totalProyectos.textContent = proyectos;
   totalEmpleados.textContent = empleados;
   totalReportes.textContent = reportes;
 
  
-  // CERRAR SESIÓN 
+  // Cerrar sesion
   document.getElementById("logoutBtn").addEventListener("click", () => {
     const confirmLogout = confirm("¿Seguro que quieres cerrar sesión?");
     if (confirmLogout) {

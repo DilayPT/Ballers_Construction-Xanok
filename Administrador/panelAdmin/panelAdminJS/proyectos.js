@@ -1,9 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   // Referencias DOM (acceso a elementos de la página)
   const form = document.getElementById("formProyecto");
   const lista = document.getElementById("listaProyectos");
-  const totalDinamicos = document.getElementById("totalDinamicos");
+  // referencia al elemento correcto en el HTML
+  const totalProyectos = document.getElementById("totalProyectos");
   const totalCompletados = document.getElementById("totalCompletados");
   const totalEnCurso = document.getElementById("totalEnCurso");
 
@@ -90,9 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const completados = proyectos.filter(p => Number(p.progreso) === 100).length;
     const enCurso = proyectos.filter(p => Number(p.progreso) < 100).length;
 
-    totalDinamicos.textContent = total;
-    totalCompletados.textContent = completados;
-    totalEnCurso.textContent = enCurso;
+    // Solo escribir si los elementos existen para evitar errores en páginas parciales
+    if (totalProyectos) totalProyectos.textContent = total;
+    if (totalCompletados) totalCompletados.textContent = completados;
+    if (totalEnCurso) totalEnCurso.textContent = enCurso;
   }
 
   // escapar texto para evitar inyección en ejemplos
